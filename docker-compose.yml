@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  diabit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: diabit-app
+    ports:
+      - "3030:3030"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NODE_ENV=production
+    restart: always

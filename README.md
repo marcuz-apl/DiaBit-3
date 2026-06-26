@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DiaBit - Engineering-Grade Drilling Trajectory Suite
 
-## Getting Started
+**DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories. It provides well planners and directional drilling engineers with a performant, centralized web alternative to legacy desktop applications (e.g., Halliburton COMPASS or EDT) without sacrificing mathematical accuracy.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 1. Tech Stack & Core Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend**: Next.js 16 (App Router), React 19, TypeScript.
+- **Styling**: Tailwind CSS v4, supporting dynamic Light/Dark themes and interactive Col-Resize sidebar handles.
+- **Database**: SQLite3 (`data/diabit.db`) using `better-sqlite3` for persistent storage of well data and configurations.
+- **Math Engine**: Minimum Curvature Method (MCM) for 3D spatial trajectory calculations.
+- **Charts Suite**: Plotly.js (`plotly.js-dist-min`) for dynamic WebGL 3D paths, 2D Plan View, and 2D Vertical Section plots.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. Getting Started (Local Development)
 
-## Learn More
+### Prerequisites
+- Node.js (version 20 or higher)
+- npm (version 10 or higher)
 
-To learn more about Next.js, take a look at the following resources:
+### Native Setup
+1. Install package dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Launch the application:
+   ```bash
+   npm run dev
+   ```
+   *Note: The server checks port availability starting at `3030`. If `3030` is occupied, it automatically falls back sequentially to `3031`, `3032`, etc.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Open your browser and navigate to the port output in the terminal (e.g., `http://localhost:3030`).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 3. Running with Docker Container
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can run DiaBit containerized using Docker and Docker Compose. This mounts the host `./data` directory to persist database configurations.
+
+1. Build and launch the container stack:
+   ```bash
+   docker-compose up --build -d
+   ```
+
+2. Stop the application container:
+   ```bash
+   docker-compose down
+   ```
+
+---
+
+## 4. Test Accounts & Seeder
+The SQLite database is initialized with default assets (Canada → Alberta → Western Canada → Pembina → PEM-101 → Slot-A1) and calculations.
+- **Administrator**: `admin` / `admin123` (Full profile and dataset CRUD rights)
+- **Drilling Engineer**: `engineer` / `engineer123` (Read/Write logs, save calculations)
+
+---
+
+## 5. Version Control Rules
+- **Semantic Versioning**: `"m.n.p"` starting at `1.0.0`.
+- **Pre-commit Automation**: A pre-commit Git hook triggers `scripts/version-bump.js` to automatically increment the patch version number `p` by `0.0.1` on every successive commit.
+- **Commit Format**: All commit messages must follow the structure:
+  `v{m.n.p} Build yyyy-mm-dd-hh-mm - [Short Feature Descriptive Text]`
+
+---
+
+## 6. Resource Cost Report
+As requested in the PRD, the development resource usage is logged below:
+- **Total Development Time**: ~10 minutes
+- **Estimated Token Usage**: ~80,000 tokens (~65,000 input tokens, ~15,000 output tokens)

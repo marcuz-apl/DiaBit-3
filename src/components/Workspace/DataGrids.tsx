@@ -38,27 +38,57 @@ export default function DataGrids({ planData, surveyData, onRefresh }: DataGrids
 
   return (
     <div className="flex flex-col space-y-6">
-      {/* Upper Grid: Plan Matrix */}
-      <SingleGrid
-        title="Active Trajectory Plan Matrix"
-        type="Plan"
-        initialData={planData}
-        wellSettings={wellSettings}
-        user={user}
-        selectedSlotId={selectedSlotId}
-        onRefresh={onRefresh}
-      />
+      {/* Upper Grid: Actual Survey Matrix (Auto-hides, expands on hover) */}
+      <div className="group relative transition-all duration-700 ease-in-out max-h-11 hover:max-h-[2000px] overflow-hidden rounded-xl shadow-xs">
+        
+        {/* Closed State Header Overlay */}
+        <div className="absolute inset-x-0 top-0 z-10 flex h-11 items-center justify-between px-4 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-900 opacity-100 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
+          <div className="flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span className="text-xs font-bold text-slate-700 dark:text-slate-200">Actual Deviation Survey Matrix (Hidden)</span>
+          </div>
+          <span className="text-[10px] font-semibold text-slate-400">Hover to expand ▼</span>
+        </div>
 
-      {/* Lower Grid: Actual Survey Matrix */}
-      <SingleGrid
-        title="Actual Deviation Survey Matrix"
-        type="Survey"
-        initialData={surveyData}
-        wellSettings={wellSettings}
-        user={user}
-        selectedSlotId={selectedSlotId}
-        onRefresh={onRefresh}
-      />
+        {/* The Grid Component */}
+        <div className="transition-opacity duration-500">
+          <SingleGrid
+            title="Actual Deviation Survey Matrix"
+            type="Survey"
+            initialData={surveyData}
+            wellSettings={wellSettings}
+            user={user}
+            selectedSlotId={selectedSlotId}
+            onRefresh={onRefresh}
+          />
+        </div>
+      </div>
+
+      {/* Lower Grid: Plan Matrix (Auto-hides, expands on hover) */}
+      <div className="group relative transition-all duration-700 ease-in-out max-h-11 hover:max-h-[2000px] overflow-hidden rounded-xl shadow-xs">
+        
+        {/* Closed State Header Overlay */}
+        <div className="absolute inset-x-0 top-0 z-10 flex h-11 items-center justify-between px-4 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-900 opacity-100 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none">
+          <div className="flex items-center space-x-2">
+            <span className="w-2 h-2 rounded-full bg-sky-500"></span>
+            <span className="text-xs font-bold text-slate-700 dark:text-slate-200">Active Trajectory Plan Matrix (Hidden)</span>
+          </div>
+          <span className="text-[10px] font-semibold text-slate-400">Hover to expand ▼</span>
+        </div>
+
+        {/* The Grid Component */}
+        <div className="transition-opacity duration-500">
+          <SingleGrid
+            title="Active Trajectory Plan Matrix"
+            type="Plan"
+            initialData={planData}
+            wellSettings={wellSettings}
+            user={user}
+            selectedSlotId={selectedSlotId}
+            onRefresh={onRefresh}
+          />
+        </div>
+      </div>
     </div>
   );
 }

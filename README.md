@@ -30,9 +30,9 @@
    ```bash
    npm run dev
    ```
-   *Note: The server checks port availability starting at `3030`. If `3030` is occupied, it automatically falls back sequentially to `3031`, `3032`, etc.*
+   *Note: The server checks port availability starting at `3032`. If `3032` is occupied, it automatically falls back sequentially to `3033`, `3034`, etc.*
 
-3. Open your browser and navigate to the port output in the terminal (e.g., `http://localhost:3030`).
+3. Open your browser and navigate to the port output in the terminal (e.g., `http://localhost:3032`).
 
 ---
 
@@ -53,7 +53,9 @@ You can run DiaBit containerized using Docker and Docker Compose. This mounts th
 ---
 
 ## 4. Test Accounts & Seeder
-The SQLite database is initialized with default assets (Canada → Alberta → Western Canada → Pembina → PEM-101 → Slot-A1) and calculations.
+The SQLite database is initialized with two default asset trees and calculations:
+1. **Metric Example**: Canada → Alberta → Western Canada → Pembina → PEM-101 → Slot-A1
+2. **Imperial Example**: USA → Texas → Permian Basin → Midland → MID-202 → Slot-B1
 - **Administrator**: `admin` / `admin123` (Full profile and dataset CRUD rights)
 - **Drilling Engineer**: `engineer` / `engineer123` (Read/Write logs, save calculations)
 
@@ -69,5 +71,5 @@ The SQLite database is initialized with default assets (Canada → Alberta → W
 
 ## 6. Resource Cost Report
 As requested in the PRD, the development resource usage is logged below:
-- **Total Development Time**: ~10 minutes
-- **Estimated Token Usage**: ~80,000 tokens (~65,000 input tokens, ~15,000 output tokens)
+- **Total Development Time**: ~45 minutes
+- **Estimated Token Usage**: ~120,000 tokens (~100,000 input tokens, ~20,000 output tokens)

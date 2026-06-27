@@ -176,10 +176,10 @@ export default function Home() {
                   <span className="text-xs font-semibold text-slate-400">Recomputing directional model...</span>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
+                <div className="flex flex-col space-y-8 items-stretch">
                   
                   {/* (2) Excel-Layout Data Grids */}
-                  <div className="space-y-6 order-2 xl:order-1">
+                  <div className="w-full">
                     <DataGrids
                       planData={planTrajectory}
                       surveyData={surveyTrajectory}
@@ -188,7 +188,7 @@ export default function Home() {
                   </div>
 
                   {/* (3) Chart Suite Canvas */}
-                  <div className="sticky top-0 order-1 xl:order-2">
+                  <div className="w-full">
                     <ChartSuite
                       planPoints={planTrajectory?.points || []}
                       surveyPoints={surveyTrajectory?.points || []}

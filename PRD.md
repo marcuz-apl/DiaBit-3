@@ -15,7 +15,7 @@
 * **Frontend**: **Next.js (App Router)** with **React** and **TypeScript** for robust typing, state management, and optimized rendering.
 * **Styling**: **Tailwind CSS** for a clean, sleek, engineering-grade dark/light user interface.
 * **Database**: **SQLite3** (`data/diabit.db`) for lightweight, high-performance structured storage of assets, user profiles, plans, and surveys.
-* **Execution Environment**: Local or containerized execution bound to **Port 3030** (fallback sequentially to 3031, 3032, etc., if occupied).
+* **Execution Environment**: Local or containerized execution bound to **Port 3032** (fallback sequentially to 3033, 3034, etc., if occupied).
 
 
 
@@ -144,7 +144,7 @@ An authenticated Admin Panel provides operations to manage database records:
 
 - **Privilege Authorization**: Full operational privileges are granted directly inside the execution workspace folder directory; no external runtime permission queries are required during script execution.
 - **Technical Diary Sync**: Critical architectural adjustments, computational compromises, or edge-case handling must be continuously summarized into descriptive markdown log files stored inside the `./Docs/` sub-directory.
-- **Port Availability Fallbacks**: The application defaults to network port **3030**. If occupied by alternate active local listening tasks, it automatically steps upward through subsequent open ports (`3031`, `3032`, etc.).
+- **Port Availability Fallbacks**: The application defaults to network port **3032**. If occupied by alternate active local listening tasks, it automatically steps upward through subsequent open ports (`3033`, `3034`, etc.).
 - **Critical Designs, implementation plans and workarounds** shall be summarized and saved into specific markdown files in ./docs subfolder and keep updated till project ends.
 - **Prepare AGENTS.md, README.md** (Including at least a introduction of the DiaBit app and tech stack for this dev) and **Dockerfile**, **docker-compose.yml**
 - Eventually report "**how many tokens have been costed**" and "**how many minutes have taken**" into the last part of the README.md.

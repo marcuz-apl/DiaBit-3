@@ -26,7 +26,7 @@ COPY --from=builder /app/src ./src
 # Create data directory for SQLite persistence
 RUN mkdir -p /app/data
 
-EXPOSE 3030
+EXPOSE 3032
 
 # Start server using the port fallback script
 CMD ["npm", "run", "start"]

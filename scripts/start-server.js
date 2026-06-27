@@ -1,7 +1,7 @@
 const net = require('net');
 const { spawn } = require('child_process');
 
-const START_PORT = 3030;
+const START_PORT = 3032;
 
 /**
  * Checks if a port is free

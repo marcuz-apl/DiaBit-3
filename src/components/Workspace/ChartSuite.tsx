@@ -204,7 +204,7 @@ export default function ChartSuite({ planPoints, surveyPoints }: ChartSuiteProps
   }
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
       {/* 3D Chart Container */}
       <div className="relative rounded-xl border border-slate-200/70 bg-white p-2 shadow-xs dark:border-slate-800 dark:bg-[#111827]">
         <div className="absolute top-4 right-4 z-10 flex items-center space-x-1.5 rounded-full bg-slate-100/80 px-2.5 py-1 text-[10px] font-semibold text-slate-500 dark:bg-slate-800/85 dark:text-slate-400">
@@ -214,17 +214,14 @@ export default function ChartSuite({ planPoints, surveyPoints }: ChartSuiteProps
         <div ref={chart3DRef} className="h-80 w-full rounded-lg overflow-hidden" />
       </div>
 
-      {/* 2D Charts Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Plan View (Easting vs Northing) */}
-        <div className="rounded-xl border border-slate-200 bg-white p-2 shadow-xs dark:border-slate-800 dark:bg-[#111827]">
-          <div ref={chartPlanRef} className="h-64 w-full rounded-lg overflow-hidden" />
-        </div>
+      {/* Plan View (Easting vs Northing) */}
+      <div className="rounded-xl border border-slate-200 bg-white p-2 shadow-xs dark:border-slate-800 dark:bg-[#111827]">
+        <div ref={chartPlanRef} className="h-80 w-full rounded-lg overflow-hidden" />
+      </div>
 
-        {/* Vertical Section View (TVD vs Disp) */}
-        <div className="rounded-xl border border-slate-200 bg-white p-2 shadow-xs dark:border-slate-800 dark:bg-[#111827]">
-          <div ref={chartVertRef} className="h-64 w-full rounded-lg overflow-hidden" />
-        </div>
+      {/* Vertical Section View (TVD vs Disp) */}
+      <div className="rounded-xl border border-slate-200 bg-white p-2 shadow-xs dark:border-slate-800 dark:bg-[#111827]">
+        <div ref={chartVertRef} className="h-80 w-full rounded-lg overflow-hidden" />
       </div>
     </div>
   );

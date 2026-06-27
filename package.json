@@ -1,6 +1,6 @@
 {
   "name": "diabit",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "private": true,
   "scripts": {
     "dev": "node scripts/start-server.js",

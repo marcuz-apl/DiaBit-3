@@ -162,9 +162,64 @@ export function initDb() {
       { measuredDepth: 1200, inclination: 24.9, azimuth: 45 },
     ];
 
-    // Calculate details and insert
+    // Calculate details and insert for Canada
     savePoints(planId, planPoints, { easting: 500000.0, northing: 5800000.0, elevation: 120.0, unit: 'metric' });
     savePoints(surveyId, surveyPoints, { easting: 500000.0, northing: 5800000.0, elevation: 120.0, unit: 'metric' });
+
+    // Tree: USA -> Texas -> Permian Basin -> Midland -> MID-202 -> Slot-B1
+    const usaResult = runInsert.run('USA', 'Country', null);
+    const usaId = usaResult.lastInsertRowid;
+
+    const texasResult = runInsert.run('Texas', 'State/Province', usaId);
+    const texasId = texasResult.lastInsertRowid;
+
+    const permianResult = runInsert.run('Permian Basin', 'GeoBasin', texasId);
+    const permianId = permianResult.lastInsertRowid;
+
+    const midlandResult = runInsert.run('Midland', 'Field', permianId);
+    const midlandId = midlandResult.lastInsertRowid;
+
+    const midWellResult = runInsert.run('MID-202', 'Well', midlandId);
+    const midWellId = midWellResult.lastInsertRowid;
+
+    const slotB1Result = runInsert.run('Slot-B1', 'Slot', midWellId);
+    const slotB1Id = slotB1Result.lastInsertRowid;
+
+    // Seed default settings for Slot-B1 (Imperial)
+    db.prepare('INSERT INTO well_settings (slot_id, easting, northing, elevation, unit) VALUES (?, ?, ?, ?, ?)').run(
+      slotB1Id,
+      1500000.0,
+      10500000.0,
+      2800.0,
+      'imperial'
+    );
+
+    const usaPlanResult = trajInsert.run(slotB1Id, 'Plan v1', 'Plan', 1);
+    const usaPlanId = usaPlanResult.lastInsertRowid;
+
+    const usaSurveyResult = trajInsert.run(slotB1Id, 'Survey Actual', 'Survey', 1);
+    const usaSurveyId = usaSurveyResult.lastInsertRowid;
+
+    const usaPlanPoints = [
+      { measuredDepth: 0, inclination: 0, azimuth: 0 },
+      { measuredDepth: 500, inclination: 0, azimuth: 0 },
+      { measuredDepth: 2000, inclination: 15, azimuth: 90 },
+      { measuredDepth: 4000, inclination: 45, azimuth: 90 },
+      { measuredDepth: 6000, inclination: 90, azimuth: 90 },
+      { measuredDepth: 10000, inclination: 90, azimuth: 90 },
+    ];
+
+    const usaSurveyPoints = [
+      { measuredDepth: 0, inclination: 0, azimuth: 0 },
+      { measuredDepth: 550, inclination: 0.5, azimuth: 12 },
+      { measuredDepth: 1950, inclination: 12.5, azimuth: 88 },
+      { measuredDepth: 3900, inclination: 44.0, azimuth: 92 },
+      { measuredDepth: 5950, inclination: 89.5, azimuth: 89 },
+      { measuredDepth: 9800, inclination: 90.2, azimuth: 91 },
+    ];
+
+    savePoints(usaPlanId, usaPlanPoints, { easting: 1500000.0, northing: 10500000.0, elevation: 2800.0, unit: 'imperial' });
+    savePoints(usaSurveyId, usaSurveyPoints, { easting: 1500000.0, northing: 10500000.0, elevation: 2800.0, unit: 'imperial' });
   }
 }
 

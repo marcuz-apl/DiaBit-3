@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div className="flex items-center space-x-1.5">
             <Info className="h-5 w-5 text-sky-500" />
             <span className="text-sm font-black tracking-tight text-slate-800 dark:text-white uppercase">
-              About DiaBit Trajectory Suite
+              About DiaBitter Trajectory Suite
             </span>
           </div>
 
@@ -48,14 +48,14 @@ export default function AboutPage() {
           </div>
           
           <div className="space-y-1.5">
-            <h1 className="text-2xl font-black tracking-tight">DiaBit Drilling Trajectory Suite</h1>
+            <h1 className="text-2xl font-black tracking-tight">DiaBitter Drilling Trajectory Suite</h1>
             <p className="text-xs text-sky-600 dark:text-sky-400 font-bold uppercase tracking-wider">
               Version {VERSION} (Next.js Engineering Build)
             </p>
           </div>
 
           <p className="text-sm text-slate-500 dark:text-slate-400 max-w-lg mx-auto leading-relaxed">
-            DiaBit is an ultra-performant, premium web-native suite designed for well planners and directional drilling engineers. It serves as a modern, lightweight, and collaborative alternative to heavy legacy desktop software packages.
+            DiaBitter is an ultra-performant, premium web-native suite designed for well planners and directional drilling engineers. It serves as a modern, lightweight, and collaborative alternative to heavy legacy desktop software packages.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function AboutPage() {
           <div className="space-y-1.5 text-xs leading-relaxed">
             <h4 className="font-bold text-slate-700 dark:text-slate-200">Alfazen Engineering Division</h4>
             <p className="text-slate-500 dark:text-slate-400">
-              Alfazen Inc. focuses on building high-fidelity directional drilling solvers, casing design packages, and downhole mechanics tracking software. DiaBit represents our next-generation web-based operational planning module.
+              Alfazen Inc. focuses on building high-fidelity directional drilling solvers, casing design packages, and downhole mechanics tracking software. DiaBitter represents our next-generation web-based operational planning module.
             </p>
           </div>
         </div>

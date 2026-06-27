@@ -60,7 +60,7 @@ export default function LoginPage() {
             </svg>
           </div>
           <h2 className="text-xl font-black text-slate-800 dark:text-white tracking-tight">
-            Sign In to DiaBit
+            Sign In to DiaBitter
           </h2>
           <p className="mt-1.5 text-xs text-slate-400">
             Enterprise Directional Drilling Planning Suite

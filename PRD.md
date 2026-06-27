@@ -1,11 +1,11 @@
-# Product Requirements Document (PRD): DiaBit
+# Product Requirements Document (PRD): DiaBitter
 
 
 
 ## 1. Project Overview & Problem Statement
 
-* **Context**: **DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories for the Oil & Gas industry.
-* **Problem Statement**: Standard legacy industry packages are heavy desktop installations with complex licensing structures. DiaBit provides an accessible, performant, and centralized web-native alternative without sacrificing mathematical accuracy.
+* **Context**: **DiaBitter** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories for the Oil & Gas industry.
+* **Problem Statement**: Standard legacy industry packages are heavy desktop installations with complex licensing structures. DiaBitter provides an accessible, performant, and centralized web-native alternative without sacrificing mathematical accuracy.
 * **Target Audience**: Well Planners, Directional Drilling Engineers, and Operators requiring rapid, exact trajectory calculation, historical data tracking, and visual profiling.
 
 
@@ -25,7 +25,7 @@ The user interface follows an ultra-sleek, three-part layout: **Header Bar**, **
 
 ### 3.1 The Header Bar
 * **Left Corner**: Interactive `Help` and `About` buttons leading to separate documentation and product layout pages.
-* **Center**: Centered minimalist application logo, name **"DiaBit"**, and the dynamic version indicator (e.g., `v1.0.0`).
+* **Center**: Centered minimalist application logo, name **"DiaBitter"**, and the dynamic version indicator (e.g., `v1.0.0`).
 * **Right Corner**: User sign-in interface, an **Admin Panel** link (visible *only* to authorized administrator accounts, positioned directly before the username), and a standard Light/Dark theme-toggler anchored to the extreme right.
 
 ### 3.2 The Body Workspace (Split View)
@@ -146,5 +146,5 @@ An authenticated Admin Panel provides operations to manage database records:
 - **Technical Diary Sync**: Critical architectural adjustments, computational compromises, or edge-case handling must be continuously summarized into descriptive markdown log files stored inside the `./Docs/` sub-directory.
 - **Port Availability Fallbacks**: The application defaults to network port **3032**. If occupied by alternate active local listening tasks, it automatically steps upward through subsequent open ports (`3033`, `3034`, etc.).
 - **Critical Designs, implementation plans and workarounds** shall be summarized and saved into specific markdown files in ./docs subfolder and keep updated till project ends.
-- **Prepare AGENTS.md, README.md** (Including at least a introduction of the DiaBit app and tech stack for this dev) and **Dockerfile**, **docker-compose.yml**
+- **Prepare AGENTS.md, README.md** (Including at least a introduction of the DiaBitter app and tech stack for this dev) and **Dockerfile**, **docker-compose.yml**
 - Eventually report "**how many tokens have been costed**" and "**how many minutes have taken**" into the last part of the README.md.

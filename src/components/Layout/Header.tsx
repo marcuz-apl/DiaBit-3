@@ -59,7 +59,7 @@ export default function Header() {
               </svg>
             </div>
             <span className="bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-xl font-bold tracking-tight dark:from-white dark:to-slate-200">
-              DiaBit
+              DiaBitter
             </span>
           </Link>
           <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-500 dark:bg-slate-800 dark:text-slate-400">

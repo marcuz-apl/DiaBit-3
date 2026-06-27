@@ -236,7 +236,7 @@ export default function AdminPanel() {
           <div className="flex items-center space-x-2">
             <ShieldCheck className="h-5 w-5 text-rose-500" />
             <span className="text-sm font-black tracking-tight text-rose-600 dark:text-rose-400 uppercase">
-              DiaBit Administration Console
+              DiaBitter Administration Console
             </span>
           </div>
 

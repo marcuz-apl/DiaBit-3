@@ -1,6 +1,6 @@
-# DiaBit - Engineering-Grade Drilling Trajectory Suite
+# DiaBitter - Engineering-Grade Drilling Trajectory Suite
 
-**DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories. It provides well planners and directional drilling engineers with a performant, centralized web alternative to legacy desktop applications without sacrificing mathematical accuracy.
+**DiaBitter** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories. It provides well planners and directional drilling engineers with a performant, centralized web alternative to legacy desktop applications without sacrificing mathematical accuracy.
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## 3. Running with Docker Container
 
-You can run DiaBit containerized using Docker and Docker Compose. This mounts the host `./data` directory to persist database configurations.
+You can run DiaBitter containerized using Docker and Docker Compose. This mounts the host `./data` directory to persist database configurations.
 
 1. Build and launch the container stack:
    ```bash

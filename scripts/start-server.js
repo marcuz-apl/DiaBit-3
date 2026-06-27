@@ -41,7 +41,7 @@ async function findAvailablePort(startPort) {
 
 async function main() {
   const port = await findAvailablePort(START_PORT);
-  console.log(`\n>>> Launching DiaBit on available port: ${port}\n`);
+  console.log(`\n>>> Launching DiaBitter on available port: ${port}\n`);
 
   const args = [...process.argv.slice(2)];
   

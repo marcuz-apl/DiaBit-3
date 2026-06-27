@@ -1,6 +1,6 @@
-# Technical Diary: DiaBit Development
+# Technical Diary: DiaBitter Development
 
-This document tracks critical architectural adjustments, design decisions, mathematical formulations, and workarounds implemented during the development of DiaBit.
+This document tracks critical architectural adjustments, design decisions, mathematical formulations, and workarounds implemented during the development of DiaBitter.
 
 ---
 

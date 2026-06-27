@@ -21,7 +21,7 @@ export default function HelpPage() {
           <div className="flex items-center space-x-1.5">
             <HelpCircle className="h-5 w-5 text-sky-500" />
             <span className="text-sm font-black tracking-tight text-slate-800 dark:text-white uppercase">
-              DiaBit Support Documentation
+              DiaBitter Support Documentation
             </span>
           </div>
 
@@ -34,7 +34,7 @@ export default function HelpPage() {
         <div className="flex flex-col space-y-2">
           <h1 className="text-2xl font-black tracking-tight">Help Center & Manual</h1>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Welcome to the DiaBit technical guides. Learn about the workspace operations, data editing, and underlying trajectory mechanics.
+            Welcome to the DiaBitter technical guides. Learn about the workspace operations, data editing, and underlying trajectory mechanics.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function HelpPage() {
               <h3 className="text-sm font-bold">Workspace Asset Hierarchy</h3>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              DiaBit organizes geological drilling locations in a strict physical parent-child tree structure:
+              DiaBitter organizes geological drilling locations in a strict physical parent-child tree structure:
               <br />
               <code className="block mt-2 rounded-lg bg-slate-50 p-2 text-[10px] dark:bg-slate-900 font-bold border border-slate-100 dark:border-slate-800">
                 Country → State/Province → GeoBasin → Field → Well → Slot → Plans / Surveys

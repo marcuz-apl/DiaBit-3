@@ -3,7 +3,7 @@ import { AppProvider } from "@/components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DiaBit - Directional Drilling Trajectory Suite",
+  title: "DiaBitter - Directional Drilling Trajectory Suite",
   description: "Engineering-grade directional drilling trajectory calculation and 3D visualization suite.",
 };
 

@@ -106,7 +106,7 @@ export default function Footer() {
             </div>
             <div className="mt-4 space-y-3.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
               <p>
-                <strong>DiaBit</strong> is designed as a high-fidelity tool for planning and analyzing directional drilling trajectory curves using the 3D Minimum Curvature Method (MCM).
+                <strong>DiaBitter</strong> is designed as a high-fidelity tool for planning and analyzing directional drilling trajectory curves using the 3D Minimum Curvature Method (MCM).
               </p>
               <p>
                 While the mathematical calculations conform to Industry standard formulas, all outputs should be independently reviewed by a certified well control engineer prior to physical spudding, casing running, or steering operations.

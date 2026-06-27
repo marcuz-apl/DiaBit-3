@@ -216,7 +216,7 @@ export default function Home() {
                 </svg>
               </div>
               <h1 className="text-2xl font-black tracking-tight text-slate-800 dark:text-white">
-                Welcome to DiaBit Trajectory Suite
+                Welcome to DiaBitter Trajectory Suite
               </h1>
               <p className="mt-2.5 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 A premium directional drilling calculations platform. Select a Well Slot from the Asset Sidebar to view coordinates, modify log points, and interact with the 3D projection model.

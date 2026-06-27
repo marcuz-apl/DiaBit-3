@@ -1,6 +1,6 @@
-# DiaBit Agent Guidelines
+# DiaBitter Agent Guidelines
 
-Welcome, agent! This document outlines the project architecture, mathematical standards, and coding conventions for maintaining and expanding **DiaBit**.
+Welcome, agent! This document outlines the project architecture, mathematical standards, and coding conventions for maintaining and expanding **DiaBitter**.
 
 ---
 

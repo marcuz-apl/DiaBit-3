@@ -76,6 +76,26 @@ export default function AssetSidebar() {
       if (res.ok) {
         const data = await res.json();
         setTreeData(data);
+
+        // Auto-select project if only one Slot exists
+        const slots: { id: number | string, pathIds: string[] }[] = [];
+        const findSlots = (nodes: AssetNode[], currentPath: string[]) => {
+          for (const n of nodes) {
+            const path = [...currentPath, String(n.id)];
+            if (n.type === 'Slot') slots.push({ id: n.id, pathIds: path });
+            if (n.children) findSlots(n.children, path);
+          }
+        };
+        findSlots(data, []);
+
+        if (slots.length === 1 && !selectedSlotId) {
+          setSelectedSlotId(Number(slots[0].id));
+          setExpandedNodes(prev => {
+            const next = { ...prev };
+            slots[0].pathIds.forEach(id => { next[id] = true; });
+            return next;
+          });
+        }
       }
     } catch (err) {
       console.error('Error fetching asset tree:', err);

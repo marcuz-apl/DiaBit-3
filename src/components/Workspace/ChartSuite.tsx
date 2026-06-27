@@ -96,7 +96,7 @@ export default function ChartSuite({ planPoints, surveyPoints }: ChartSuiteProps
           backgroundcolor: bgColor, 
           gridcolor: gridColor, 
           showbackground: true,
-          autorange: 'reverse' // Depth increases downwards
+          autorange: 'reversed' // Depth increases downwards
         },
         camera: {
           eye: { x: 1.25, y: 1.25, z: 0.6 }
@@ -183,7 +183,7 @@ export default function ChartSuite({ planPoints, surveyPoints }: ChartSuiteProps
         title: 'True Vertical Depth (TVD)', 
         gridcolor: gridColor, 
         linecolor: gridColor, 
-        autorange: 'reverse', // TVD depth goes downwards
+        autorange: 'reversed', // TVD depth goes downwards
         zeroline: false
       },
       legend: { x: 0.02, y: 0.98 },

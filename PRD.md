@@ -5,7 +5,7 @@
 ## 1. Project Overview & Problem Statement
 
 * **Context**: **DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories for the Oil & Gas industry.
-* **Problem Statement**: Standard industry packages (e.g., Halliburton/Landmark's EDT or COMPASS, Paradigm's SysDril) are heavy desktop installations with complex licensing structures. DiaBit provides an accessible, performant, and centralized web-native alternative without sacrificing mathematical accuracy.
+* **Problem Statement**: Standard legacy industry packages are heavy desktop installations with complex licensing structures. DiaBit provides an accessible, performant, and centralized web-native alternative without sacrificing mathematical accuracy.
 * **Target Audience**: Well Planners, Directional Drilling Engineers, and Operators requiring rapid, exact trajectory calculation, historical data tracking, and visual profiling.
 
 

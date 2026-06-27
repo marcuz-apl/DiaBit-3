@@ -109,7 +109,7 @@ export default function Footer() {
                 <strong>DiaBit</strong> is designed as a high-fidelity tool for planning and analyzing directional drilling trajectory curves using the 3D Minimum Curvature Method (MCM).
               </p>
               <p>
-                While the mathematical calculations conform to Industry standard formulas (aligned with COMPASS and EDT calculation modules), all outputs should be independently reviewed by a certified well control engineer prior to physical spudding, casing running, or steering operations.
+                While the mathematical calculations conform to Industry standard formulas, all outputs should be independently reviewed by a certified well control engineer prior to physical spudding, casing running, or steering operations.
               </p>
               <p>
                 Alfazen Inc. assumes no liability for downhole tool damage, bottomhole assembly (BHA) loss, sidetracks, or drilling deviations arising from direct reliance on calculations generated in this application interface.

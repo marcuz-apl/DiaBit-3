@@ -55,7 +55,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-sm text-slate-500 dark:text-slate-400 max-w-lg mx-auto leading-relaxed">
-            DiaBit is an ultra-performant, premium web-native suite designed for well planners and directional drilling engineers. It serves as a modern, lightweight, and collaborative alternative to heavy legacy desktop software packages like COMPASS or EDT.
+            DiaBit is an ultra-performant, premium web-native suite designed for well planners and directional drilling engineers. It serves as a modern, lightweight, and collaborative alternative to heavy legacy desktop software packages.
           </p>
         </div>
 

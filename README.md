@@ -1,6 +1,6 @@
 # DiaBit - Engineering-Grade Drilling Trajectory Suite
 
-**DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories. It provides well planners and directional drilling engineers with a performant, centralized web alternative to legacy desktop applications (e.g., Halliburton COMPASS or EDT) without sacrificing mathematical accuracy.
+**DiaBit** is a premium, engineering-grade web application built to calculate, manage, and visualize directional drilling trajectories. It provides well planners and directional drilling engineers with a performant, centralized web alternative to legacy desktop applications without sacrificing mathematical accuracy.
 
 ---
 
